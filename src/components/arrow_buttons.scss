@@ -1,0 +1,11 @@
+.Slider_buttons{
+    display:inline-flex;
+    margin-top:auto;
+    margin-left:auto;
+    button{
+        padding:0.5em 1.5em;
+        border:none;
+        outline:0;
+        background-color:var(--Black);
+    }
+}

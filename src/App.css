@@ -1,0 +1,30 @@
+
+header{
+    width:100%;
+    min-width:450px;
+    /* display:flex;
+    align-items:center; */
+    padding:0 3em;
+    z-index:100;
+}
+header img:first-child{
+    position:absolute;
+    top:2em;
+    z-index:11;
+}
+header .Logo{
+    position:absolute;
+    right:13em;
+    top:2em;
+}
+.Slider{
+    width:100%;
+    min-height:500px;
+    min-width:450px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
