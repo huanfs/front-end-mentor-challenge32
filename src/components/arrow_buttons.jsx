@@ -17,33 +17,24 @@ function Arrow_buttons(){
 
     /*effect*/
     useEffect(()=>{
-        left.current.addEventListener("click", ToLeft);
-        right.current.addEventListener("click", ToRight);
-    },[])
-    function ToLeft(){
-        if(Context.count<0){
-            Context.setCount(0);
-        }
-        else{
-            Context.setCount((prevCount)=>{return prevCount-1})
-        }
-        
-    }
-    function ToRight(){
-        if(Context.count>2){
-            Context.setCount(2)
-        }
-        else{
-            Context.setCount((prevCount)=>{return prevCount+1})
-        }
-    }
-    useEffect(()=>{
         console.log(Context.count)
+        Context.count===0?left.current.style.opacity="0.8":left.current.style.opacity="1";
+        Context.count===2?right.current.style.opacity="0.8":right.current.style.opacity="1";
     },[Context.count])
     return(
         <div className="Slider_buttons">
-            <button type="button" ref={left}><img src={arrow_left}/></button>
-            <button type="button" ref={right}><img src={arrow_right}/></button>
+            <button type="button" ref={left} 
+            onClick={()=>{
+                Context.count<=0?Context.setCount(0):Context.setCount((prevCount)=>{return(prevCount-1)})
+            }}>
+                <img src={arrow_left}/>
+            </button>
+            <button type="button" ref={right} 
+            onClick={()=>{
+                Context.count>=2?Context.setCount(2):Context.setCount((prevCount)=>{return(prevCount+1)})
+            }}>
+                <img src={arrow_right}/>
+            </button>
         </div>
     )
 }
