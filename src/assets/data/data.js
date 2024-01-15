@@ -17,6 +17,12 @@ const Data = {
         in advanced technology to ensure that every product is made as perfect and as consistent
         as possible. with three decades of experience in this industry, we undestand what costumers
         want for their home and office`,
+    ],
+    sobre:[
+        `our multifunctional collection blends design and function to suit your individual
+        taste. make each room unique, of pick a cohesive theme that best express your interests and what 
+        inspires you. find the forniture pieces you need, from traditional to contemporary styles 
+        or anithing in between. product sprecialists are available to help you create your dream space.`
     ]
 }
 

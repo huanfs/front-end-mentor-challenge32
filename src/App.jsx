@@ -2,6 +2,11 @@ import React,{ useContext, useState, useRef, useEffect} from "react";
 /*style*/
 import './App.css'
 
+/*data*/
+import Data from "./assets/data/data.js";
+/*general images*/
+import dark from "./assets/images/image-about-dark.jpg";
+import light from "./assets/images/image-about-light.jpg";
 /*images (desktop)*/
 import banner_1 from "./assets/images/desktop-image-hero-1.jpg";
 import banner_2 from "./assets/images/desktop-image-hero-2.jpg";
@@ -55,12 +60,22 @@ function App() {
     },[count]):null}
 
   return (
-    <MyContext.Provider value={{count, setCount, width, setWidth}}>
+    <MyContext.Provider value={{count, setCount, width, setWidth, Data}}>
       <section className="Slider" ref={slider}>
         <Header/> 
         <Arrow_buttons/>
       </section>
       <Subtitle/>
+      
+      <section className="about">
+      <img src={dark}/>
+        <h2>about our forniture</h2>
+        <p>
+          {Data.sobre}
+        </p>
+        <img src={light}/>
+      </section>
+      
     </MyContext.Provider>
   )
 }

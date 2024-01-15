@@ -1,6 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
-/*data*/
-import Data from "../assets/data/data.js";
+import React, { useState, useRef, useEffect, useContext } from "react";
 
 /*components*/
 import Button from "./button.jsx";
@@ -20,14 +18,14 @@ function Subtitle(){
     return(
         <section className="subtitle">
             <h1 ref={title}>
-                {Context.count===0?Data.titulo[0]:null}
-                {Context.count===1?Data.titulo[1]:null}
-                {Context.count===2?Data.titulo[2]:null}
+                {Context.count===0?Context.Data.titulo[0]:null}
+                {Context.count===1?Context.Data.titulo[1]:null}
+                {Context.count===2?Context.Data.titulo[2]:null}
             </h1>
             <p ref={subtitle}>
-                {Context.count===0?Data.subtitulo[0]:null}
-                {Context.count===1?Data.subtitulo[1]:null}
-                {Context.count===2?Data.subtitulo[2]:null}
+                {Context.count===0?Context.Data.subtitulo[0]:null}
+                {Context.count===1?Context.Data.subtitulo[1]:null}
+                {Context.count===2?Context.Data.subtitulo[2]:null}
             </p>
             <Button/>
         </section>

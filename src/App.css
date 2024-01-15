@@ -2,8 +2,8 @@
 header{
     width:100%;
     min-width:450px;
-    /* display:flex;
-    align-items:center; */
+    display:flex;
+    align-items:center;
     padding:0 3em;
     z-index:100;
 }
@@ -27,4 +27,30 @@ header .Logo{
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+}
+.about{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    background-color:var(--White);
+}
+.about img{
+    width:100%;
+}
+.about h2, .about p{
+    padding:2em;
+}
+.about h2{
+    font-weight:900;
+    font-size:1em;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    word-spacing:5px;
+    padding:4em 2em 2em 2em;
+}
+.about p{
+    padding:0 2em 2em 2em;
+    color:var(--VeryDarkGray);
+    font-size:18px;
 }
