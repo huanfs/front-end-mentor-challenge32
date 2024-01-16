@@ -19,6 +19,7 @@ import banner_3mobile from "./assets/images/mobile-image-hero-3.jpg";
 
 /*components*/
 import Header from "./components/header.jsx";
+import MenuDesktop from "./components/menuDesktop.jsx";
 import Arrow_buttons from "./components/arrow_buttons.jsx";
 import Subtitle from "./components/subtitle.jsx";
 
@@ -39,22 +40,22 @@ function App() {
   /*effect*/
   {slider?
     useEffect(()=>{
-      if(count===0&&width<=500){
+      if(count===0&&width<=510){
         slider.current.style.backgroundImage=`url(${banner_1mobile})`;
       }
-      if(count===1&&width<=500){
+      if(count===1&&width<=510){
         slider.current.style.backgroundImage=`url(${banner_2mobile})`;
       }
-      if(count===2&&width<=500){
+      if(count===2&&width<=510){
         slider.current.style.backgroundImage=`url(${banner_3mobile})`;
       }
-      else if(count===0&&width>500){
+      else if(count===0&&width>510){
         slider.current.style.backgroundImage=`url(${banner_1})`;
       }
-      else if(count===1&&width>500){
+      else if(count===1&&width>510){
         slider.current.style.backgroundImage=`url(${banner_2})`;
       }
-      else if(count===2&&width>500){
+      else if(count===2&&width>510){
         slider.current.style.backgroundImage=`url(${banner_3})`;
       }
     },[count]):null}
@@ -62,17 +63,22 @@ function App() {
   return (
     <MyContext.Provider value={{count, setCount, width, setWidth, Data}}>
       <section className="Slider" ref={slider}>
-        <Header/> 
+        {
+          width<=500?
+          <Header/>:<MenuDesktop/>
+        }
         <Arrow_buttons/>
       </section>
       <Subtitle/>
       
       <section className="about">
       <img src={dark}/>
+      <div className="aboutText">
         <h2>about our forniture</h2>
-        <p>
-          {Data.sobre}
-        </p>
+          <p>
+            {Data.sobre}
+          </p>
+      </div>
         <img src={light}/>
       </section>
       

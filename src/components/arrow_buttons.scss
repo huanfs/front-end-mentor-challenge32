@@ -1,11 +1,31 @@
-.Slider_buttons{
-    display:inline-flex;
-    margin-top:auto;
-    margin-left:auto;
-    button{
-        padding:0.5em 1.5em;
-        border:none;
-        outline:0;
-        background-color:var(--Black);
+@media screen and (max-width:510px){
+    .Slider_buttons{
+        display:inline-flex;
+        margin-top:auto;
+        margin-left:auto;
+        button{
+            padding:0.5em 1.5em;
+            border:none;
+            outline:0;
+            background-color:var(--Black);
+        }
+    }
+}
+@media screen and (min-width:511px){
+    .Slider_buttons{
+        display:inline-flex;
+        margin-top:auto;
+        margin-left:auto;
+        position:relative;
+        top:-4.3em;
+        left:10.2em;
+        transform:translateX(-1%);
+        
+        button{
+            padding:1em 2.1em;
+            border:none;
+            outline:0;
+            background-color:var(--Black);
+        }
     }
 }

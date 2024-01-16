@@ -22,3 +22,29 @@ body{
     width:100%;
   }
 }
+@media screen and (min-width:511px){
+  #root{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    grid-template-areas:"banner slider" "bottom bottom";
+    grid-template-columns: 60% 40%;
+    grid-template-rows:65% 35%;
+  }
+  #root .Slider{
+    grid-area:banner;
+  }
+  #root .subtitle{
+    grid-area:slider;
+  }
+  #root .about{
+    grid-area:bottom;
+    display:flex;
+    flex-direction:row;
+  }
+  #root .about img{
+    width:40%;
+    height:100%;
+    max-width:500px;
+  }
+}
