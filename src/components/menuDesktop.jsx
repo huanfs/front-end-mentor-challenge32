@@ -1,5 +1,5 @@
 /*style*/
-import "./MenuDesktop.scss";
+import "./menuDesktop.scss";
 import logo from "../assets/images/logo.svg";
 function MenuDesktop(){
     return(
